@@ -14,7 +14,7 @@ O fluxo desenhado e implementado para esta etapa segue a sequência abaixo:
 4. Mensagens que falham repetidamente são isoladas na fila de mensagens mortas (**SQS FIFO DLQ**).
 5. A segunda função **Lambda de Validação** consome as mensagens da fila via *polling* ativo (com tamanho de lote configurado em 1), realiza uma validação minuciosa dos itens e publica o evento com sucesso no barramento customizado do **Amazon EventBridge**.
 
-![Arquitetura do Fluxo - Dia 01](./arquitetura-dia-1.png)
+![Arquitetura do Fluxo - Dia 01](./imagens/arquitetura-dia-1.png)
 
 ---
 
