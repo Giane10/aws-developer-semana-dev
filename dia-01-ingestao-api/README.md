@@ -60,11 +60,36 @@ curl -X POST https://<ID_DA_SUA_API>.execute-api.<SUA_REGIAO>[.amazonaws.com/dev
    ]
  }'
 ```
+
+
 ## ✅ Validação do Sucesso
 
-1. **HTTP Status 200 OK:** A API deve retornar um JSON contendo a mensagem de sucesso e o respectivo identificador único da mensagem gerado pelo SQS (`sqsMessageId`).
-2. **CloudWatch Logs:** O log group da Lambda de validação final deve registrar a captura do evento, o processamento bem-sucedido e o retorno positivo do EventBridge (`FailedEntryCount: 0`).
-3. **Métricas EventBridge:** O painel de monitoramento do Custom Event Bus exibirá a atividade na métrica de chamadas recebidas após o processamento.
+Para comprovar a resiliência e o funcionamento de ponta a ponta da arquitetura integrada, as seguintes evidências reais foram coletadas e validadas:
+
+### 1. Ingestão via API Gateway e Enfileiramento Assíncrono
+A requisição HTTP POST enviada via CloudShell contendo o payload de teste foi recebida com sucesso pelo endpoint da API, gerando o identificador único de mensagem (`sqsMessageId`).
+
+![Execução do curl no CloudShell](./imagens/06.png)
+
+### 2. Consumo Efêmero na Fila SQS FIFO
+A inspeção na fila de mensageria comprova que o volume de dados foi processado sob demanda e de forma imediata, mantendo a fila limpa e pronta para novas requisições.
+
+![Métricas da Fila SQS](./imagens/07.png)
+
+### 3. Integração Serverless Ativa
+O console do AWS Lambda confirma o acoplamento do Amazon SQS como gatilho de execução direta para a lógica de validação do microsserviço.
+
+![Visão Geral da Função Lambda](./imagens/02.png)
+
+### 4. Processamento Exitoso no CloudWatch Logs
+Os registros de auditoria comprovam o ciclo completo da aplicação: a captura do evento vindo da fila, a validação estrutural dos itens e o encaminhamento com taxa zero de falhas (`FailedEntryCount: 0`).
+
+![Logs de Sucesso no CloudWatch](./imagens/04.png)
+
+### 5. Telemetria e Tráfego no Custom Event Bus
+O painel de monitoramento do Amazon EventBridge registra as métricas de atividade de chamadas `PutEvents`, consolidando a recepção do evento no núcleo de mensageria.
+
+![Métricas de Monitoramento do EventBridge](./imagens/05.png)
 
 ---
 
