@@ -26,15 +26,15 @@ O objetivo desta trilha é solidificar os conceitos de desenvolvimento focado em
 
 ---
 
-## 📂 Organização do Repositório
+### 📂 Organização do Repositório
 
 O projeto está dividido por dias e módulos focados, cada um contendo seus respectivos códigos de funções e documentação de infraestrutura:
 
 | Módulo / Dia | Descrição do Laboratório | Status |
 | :--- | :--- | :--- |
-| 📅 [Dia 01: Ingestão de Pedidos](./dia-01-ingestao-api/) | API Gateway REST, Pré-validação com Lambda, Filas SQS FIFO e publicação de eventos customizados no EventBridge. |  Concluído |
-| 📅 Dia 02: Ingestão via... | *Em breve...* | ⏳ Pendente |
-| 📅 Dia 03: Próximos passos | *Em breve...* | ⏳ Pendente |
+| **📅 Dia 01: Ingestão de Pedidos** | API Gateway REST, Pré-validação com Lambda, Filas SQS FIFO e publicação de eventos customizados no EventBridge. | 🟢 Concluído |
+| **📅 Dia 02: Ingestão em Lote** | Ingestão em lotes de arquivos contendo múltiplos pedidos através de buckets do Amazon S3. | ⏳ Pendente |
+| **📅 Dia 03: Processamento** | Em breve... | ⏳ Pendente |
 
 ---
 
@@ -48,9 +48,10 @@ Para instruções detalhadas de como provisionar a infraestrutura e rodar cada c
 
 ## 🧑‍💻 Autora
 
-* **Seu Nome Completo**
-* LinkedIn: [Seu Link do LinkedIn](https://linkedin.com/in/seu-perfil)
-* Curso: Análise e Desenvolvimento de Sistemas (ADS)
+* **Giane Costa**
+* 💼 **Formação:** Análise e Desenvolvimento de Sistemas (ADS) - UNINTER
+* ☁️ **Especialização:** AWS Developer Associate - Escola da Nuvem
+* 🔗 **LinkedIn:** [giane-costa](https://www.linkedin.com/in/giane-costa/)
 
 ---
 *Este projeto possui fins estritamente educacionais associados à preparação para a certificação AWS Certified Developer – Associate.*
