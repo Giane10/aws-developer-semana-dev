@@ -22,7 +22,7 @@ O objetivo desta trilha é solidificar os conceitos de desenvolvimento focado em
 
 À medida que o laboratório avança, a arquitetura ganha novas camadas de ingestão, processamento e desacoplamento para simular um ambiente de produção real.
 
-
+![Arquitetura do Projeto](./imagens/arquitetura-principal.png)
 
 ---
 
