@@ -11,7 +11,10 @@ O objetivo desta trilha é solidificar os conceitos de desenvolvimento focado em
 
 * **Linguagem Principal:** Python 3.12 (Boto3)
 * **Computação Serverless:** AWS Lambda
-* **Mensageria e Integração:** Amazon SQS (Fila FIFO e DLQ) & Amazon EventBridge
+* **Mensageria e Integração:** Amazon SQS (Fila FIFO, Standard e DLQs) & Amazon EventBridge
+* **Armazenamento e Data Lake:** Amazon S3
+* **Bancos de Dados NoSQL:** Amazon DynamoDB (Auditoria e Persistência Principal)
+* **Notificação e Alertas:** Amazon SNS
 * **Exposição de Endpoints:** Amazon API Gateway (REST API)
 * **Monitoramento e Logs:** Amazon CloudWatch
 * **Controle de Acesso:** AWS IAM (Identity and Access Management)
@@ -32,15 +35,16 @@ O projeto está dividido por dias e módulos focados, cada um contendo seus resp
 
 | Módulo / Dia | Descrição do Laboratório | Status |
 | :--- | :--- | :--- |
-| **📅 Dia 01: Ingestão de Pedidos** | API Gateway REST, Pré-validação com Lambda, Filas SQS FIFO e publicação de eventos customizados no EventBridge. | 🟢 Concluído |
-| **📅 Dia 02: Ingestão em Lote** | Ingestão em lotes de arquivos contendo múltiplos pedidos através de buckets do Amazon S3. | ⏳ Pendente |
-| **📅 Dia 03: Processamento** | Em breve... | ⏳ Pendente |
+| **📅 [Dia 01: Ingestão de Pedidos](./dia-01-ingestao-api-eventbridge/)** | API Gateway REST, Pré-validação com Lambda, Filas SQS FIFO e publicação de eventos customizados no EventBridge. | 🟢 Concluído |
+| **📅 [Dia 02: Ingestão em Lote](./dia-02-ingestao-batch-s3/)** | Processamento assíncrono de arquivos JSON via Amazon S3, SQS, tratamento com AWS Lambda, auditoria no DynamoDB e alertas via SNS. | 🟢 Concluído |
+| **📅 [Dia 03: Processamento Core](./dia-03-processamento-core-dynamodb/)** | Consumo de eventos do EventBridge, desacoplamento com SQS Standard de buffer, processamento via Lambda e persistência no DynamoDB. | 🟢 Concluído |
+| **📅 [Dia 04: Resiliência de Fluxos](./dia-04-resiliencia-fluxos-dlq/)** | Camadas (Lambda Layers), cancelamentos, alterações e tratamentos avançados de falhas com DLQs. | ⏳ Em breve... |
 
 ---
 
 ## 🚀 Como Executar os Testes
 
-Os testes de integração e envio de payloads para os endpoints criados utilizam comandos via terminal com `curl`. 
+Os testes de integração e envio de payloads para os endpoints criados utilizam comandos via terminal com `curl` ou uploads diretos no S3. 
 
 Para instruções detalhadas de como provisionar a infraestrutura e rodar cada componente localmente ou na AWS, acesse o `README.md` específico localizado dentro da pasta de cada dia.
 
