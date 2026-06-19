@@ -37,7 +37,7 @@ O projeto está dividido por dias e módulos focados, cada um contendo seus resp
 | :--- | :--- | :--- |
 | **📅 [Dia 01: Ingestão de Pedidos](./dia-01-ingestao-api-eventbridge/)** | API Gateway REST, Pré-validação com Lambda, Filas SQS FIFO e publicação de eventos customizados no EventBridge. | 🟢 Concluído |
 | **📅 [Dia 02: Ingestão em Lote](./dia-02-ingestao-batch-s3/)** | Processamento assíncrono de arquivos JSON via Amazon S3, SQS, tratamento com AWS Lambda, auditoria no DynamoDB e alertas via SNS. | 🟢 Concluído |
-| **📅 [Dia 03: Processamento Core](./dia-03-processamento-core-dynamodb/)** | Consumo de eventos do EventBridge, desacoplamento com SQS Standard de buffer, processamento via Lambda e persistência no DynamoDB. | 🟢 Concluído |
+| **📅 [Dia 03: Processamento Core](./dia-03-processamento-core-dynamodb/)** | Consumo de eventos do EventBridge, desacoplamento com SQS Standard de buffer, processamento via Lambda e persistência no DynamoDB. | ⏳ Em breve... |
 | **📅 [Dia 04: Resiliência de Fluxos](./dia-04-resiliencia-fluxos-dlq/)** | Camadas (Lambda Layers), cancelamentos, alterações e tratamentos avançados de falhas com DLQs. | ⏳ Em breve... |
 
 ---
